@@ -18,16 +18,7 @@ const NoteDetailsClient = () => {
     refetchOnMount: false,
   });
   if (isLoading) return <p>Loading, please wait...</p>;
-  if (error || !note)
-    return (
-      <>
-        <h1>{error?.name}</h1>
-        <h3>{error?.message}</h3>
-        <Link className="backBtn" href={`/notes`}>
-          <span className="backBtnSpan">←</span> Go back
-        </Link>
-      </>
-    );
+
   return (
     <div>
       <Link className="backBtn" href={`/notes`}>

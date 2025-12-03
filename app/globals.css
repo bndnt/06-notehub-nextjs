@@ -1,0 +1,75 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f8f9fa;
+}
+
+.main {
+  flex: 1;
+}
+.container {
+  width: 90%;
+  max-width: 1280px;
+  margin: 0px auto;
+  padding: 0 16px 16px;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+.backBtn {
+  margin: 30px 0 0;
+  display: block;
+  color: black;
+  font-size: 18px;
+  height: 3em;
+  width: 150px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+  border-radius: 3px;
+  transition: all 0.3s ease-in;
+}
+.backBtnSpan {
+  transition: all 0.3s ease-in;
+  font-size: 20px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.backBtn:hover {
+  color: #0b5ed7;
+}
+.backBtn:hover .backBtnSpan {
+  font-size: 1.2em;
+  transform: translateX(-5px);
+}

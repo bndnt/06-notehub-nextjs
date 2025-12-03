@@ -36,7 +36,7 @@ const NoteList = ({ notes }: NoteListProps) => {
             <div className={css.footer}>
               <span className={css.tag}>{note.tag}</span>
               <Link className={css.link} href={`/notes/${note.id}`}>
-                View details.
+                View details
               </Link>
               <button
                 disabled={mutation.isPending} // <- здесь используется isPending

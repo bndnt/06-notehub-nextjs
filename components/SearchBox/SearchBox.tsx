@@ -7,7 +7,7 @@ const SearchBox = ({ search, onChange }: SearchBoxProps) => {
   return (
     <div>
       <input
-        defaultValue={search}
+        value={search}
         onChange={onChange}
         className={css.input}
         type="text"

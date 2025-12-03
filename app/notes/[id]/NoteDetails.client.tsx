@@ -18,7 +18,19 @@ const NoteDetailsClient = () => {
     refetchOnMount: false,
   });
   if (isLoading) return <p>Loading, please wait...</p>;
-
+  if (error) {
+    return (
+      <div>
+        <Link className="backBtn" href="/notes">
+          <span className="backBtnSpan">←</span> Go back
+        </Link>
+        <p className={css.error}>
+          ❌ Error: Failed to load the note.
+          {error instanceof Error ? error.message : "Unknown error"}
+        </p>
+      </div>
+    );
+  }
   return (
     <div>
       <Link className="backBtn" href={`/notes`}>

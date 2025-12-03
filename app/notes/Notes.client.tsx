@@ -28,13 +28,10 @@ const NotesClient = () => {
     placeholderData: keepPreviousData,
     staleTime: 10,
   });
-  const debounceSearch = useDebouncedCallback(
-    (event: React.ChangeEvent<HTMLInputElement>) => {
-      setSearch(event.target.value);
-      setPage(1);
-    },
-    30
-  );
+  const debounceSearch = useDebouncedCallback((value: string) => {
+    setSearch(value);
+    setPage(1);
+  }, 30);
   if (error) {
     return <ErrorHandler error={error as Error} reset={() => refetch()} />;
   }
@@ -43,7 +40,10 @@ const NotesClient = () => {
     <>
       <div className={css.app}>
         <div className={css.toolbar}>
-          <SearchBox search={search} onChange={debounceSearch} />
+          <SearchBox
+            search={search}
+            onChange={(e) => debounceSearch(e.target.value)}
+          />
           {totalPages > 1 && (
             <Pagination page={page} totalPages={totalPages} setPage={setPage} />
           )}

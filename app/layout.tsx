@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import TanstackProvider from "@/components/TanstackProvider/TanstackProvider";
+import TanstackProvider from "@/components//TanStackProvider/TanstackProvider";
 
 import "./globals.css";
 import Header from "@/components/Header/Header";
